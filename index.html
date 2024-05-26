@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>databaselab</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
+    <button class="tablinks" onclick="openTab(event, 'product-site')">Product</button>
+    <button class="tablinks" onclick="openTab(event, 'customer-site')">Customer</button>
+    <button class="tablinks" onclick="openTab(event, 'order-site')">Order</button>
+    <button class="tablinks" onclick="openTab(event, 'delivery-site')">Delivery</button>
+    <button class="tablinks" onclick="openTab(event, 'rating-site')">Rating</button>
+    <button class="tablinks" onclick="openTab(event, 'inventory-site')">Inventory</button>
+    <button class="tablinks" onclick="openTab(event, 'cart-site')">Cart</button>
+
+  </div>
+  
+  <!-- Tab content -->
+  <div id="Home" class="tabcontent">
+    <div class="home">
+      <h1>Cửa hàng QDS</h1>
+      <h2>Sự hài lòng của khách hàng là tôn chỉ của QDS store!!!</h2>
+    </div>
+    
+    <img src="https://pfst.cf2.poecdn.net/base/image/76133802ea3a9cdd35d15ae31c3e0096277b3646afb51eb144a11892663501ed?w=1024&h=1024&pmaid=87193045">
+  </div>
+
+  <div id="product-site" class="tabcontent">
+    <!-- select,insert into, update,delete, product by productid   -->
+    <div id="select-form">
+      <h3>Lựa chọn sản phẩm</h3>
+      <form>
+        <label for="product-id">ID sản phẩm:</label>
+        <input type="number" id="product-id" name="product-id"><br>
+  
+        <label for="product-name">Tên sản phẩm:</label>
+        <input type="text" id="product-name" name="product-name"><br>
+    
+        <label for="price">Giá sản phẩm:</label>
+        <input type="number" id="price" name="price"><br>
+    
+        <label for="category">Phân loại:</label>
+        <input type="text" id="category" name="category"><br>
+    
+        <label for="description">Mô tả sản phẩm:</label>
+        <input type="text" id="description" name="description"><br>
+
+        <button type="submit">Lựa chọn sản phẩm</button>
+      </form>  
+    </div>
+
+    <div id="insert-form">
+      <h3>Thêm sản phẩm</h3>
+      <form>  
+        <label for="product-name">Tên sản phẩm:</label>
+        <input type="text" id="product-name" name="product-name"><br>
+    
+        <label for="price">Giá sản phẩm:</label>
+        <input type="number" id="price" name="price"><br>
+    
+        <label for="category">Phân loại:</label>
+        <input type="text" id="category" name="category"><br>
+    
+        <label for="description">Mô tả sản phẩm:</label>
+        <input type="text" id="description" name="description"><br>
+
+        <button type="submit">Thêm sản phẩm</button>
+      </form>  
+    </div>
+
+    <div id="update-form">
+      <h3>Cập nhật sản phẩm</h3>
+      <form>
+        <label for="product-id">Chọn ID sản phẩm muốn cập nhật:</label>
+        <input type="number" id="product-id" name="product-id"><br>
+  
+        <label for="product-name">Tên sản phẩm:</label>
+        <input type="text" id="product-name" name="product-name"><br>
+    
+        <label for="price">Giá sản phẩm:</label>
+        <input type="number" id="price" name="price"><br>
+    
+        <label for="category">Phân loại:</label>
+        <input type="text" id="category" name="category"><br>
+    
+        <label for="description">Mô tả sản phẩm:</label>
+        <input type="text" id="description" name="description"><br>
+
+        <button type="submit">Cập nhật sản phẩm</button>
+      </form>  
+    </div>
+
+    <div id="delete-form">
+      <h3>Xóa sản phẩm</h3>
+      <form>
+        <label for="product-id">ID sản phẩm:</label>
+        <input type="number" id="product-id" name="product-id"><br>
+  
+        <label for="product-name">Tên sản phẩm:</label>
+        <input type="text" id="product-name" name="product-name"><br>
+    
+        <label for="price">Giá sản phẩm:</label>
+        <input type="number" id="price" name="price"><br>
+    
+        <label for="category">Phân loại:</label>
+        <input type="text" id="category" name="category"><br>
+    
+        <label for="description">Mô tả sản phẩm:</label>
+        <input type="text" id="description" name="description"><br>
+
+        <button type="submit">Xóa sản phẩm</button>
+      </form>  
+    </div>
+
+    <div id="get-form">
+      <h3>Tìm kiếm sản phẩm qua ID</h3>
+      <form>
+        <label for="product-id">ID sản phẩm:</label>
+        <input type="number" id="product-id" name="product-id"><br>
+        <button type="submit">Tìm kiếm sản phẩm</button>
+      </form>  
+    </div>
+  </div>
+
+  <div id="customer-site" class="tabcontent">
+    <!-- select,insert into, update,delete, get customer by customerid   -->
+    <div id="select-form">
+      <h3>Lựa chọn khách hàng</h3>
+      <form>
+        <label for="customer-id">ID khách hàng:</label>
+        <input type="number" id="customer-id" name="customer-id"><br>
+  
+        <label for="customer-name">Tên khách hàng:</label>
+        <input type="text" id="customer-name" name="customer-name"><br>
+    
+        <label for="telephone">Số điện thoại khách hàng:</label>
+        <input type="text" id="telephone" name="telephone"><br>
+    
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br>
+    
+        <label for="age">Tuổi:</label>
+        <input type="number" id="age" name="age"><br>
+
+        <label for="address">Địa chỉ khách hàng:</label>
+        <input type="text" id="address" name="address"><br>
+
+        <button type="submit">Lựa chọn khách hàng</button>
+      </form>  
+    </div>
+
+    <div id="insert-form">
+      <h3>Thêm khách hàng</h3>
+      <form>
+        <label for="customer-name">Tên khách hàng:</label>
+        <input type="text" id="customer-name" name="customer-name"><br>
+    
+        <label for="telephone">Số điện thoại khách hàng:</label>
+        <input type="text" id="telephone" name="telephone"><br>
+    
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br>
+    
+        <label for="age">Tuổi:</label>
+        <input type="number" id="age" name="age"><br>
+
+        <label for="address">Địa chỉ khách hàng:</label>
+        <input type="text" id="address" name="address"><br>
+
+        <button type="submit">Thêm khách hàng</button>
+      </form>  
+    </div>
+
+    <div id="update-form">
+      <h3>Cập nhật khách hàng</h3>
+      <form>
+        <label for="customer-id">Chọn ID khách hàng muốn cập nhật:</label>
+        <input type="number" id="customer-id" name="customer-id"><br>
+  
+        <label for="customer-name">Tên khách hàng:</label>
+        <input type="text" id="customer-name" name="customer-name"><br>
+    
+        <label for="telephone">Số điện thoại khách hàng:</label>
+        <input type="text" id="telephone" name="telephone"><br>
+    
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br>
+    
+        <label for="age">Tuổi:</label>
+        <input type="number" id="age" name="age"><br>
+
+        <label for="address">Địa chỉ khách hàng:</label>
+        <input type="text" id="address" name="address"><br>
+
+        <button type="submit">Cập nhật khách hàng</button>
+      </form>  
+    </div>
+
+    <div id="delete-form">
+      <h3>Xóa thông tin khách hàng</h3>
+      <form>
+        <label for="customer-id">ID khách hàng:</label>
+        <input type="number" id="customer-id" name="customer-id"><br>
+  
+        <label for="customer-name">Tên khách hàng:</label>
+        <input type="text" id="customer-name" name="customer-name"><br>
+    
+        <label for="telephone">Số điện thoại khách hàng:</label>
+        <input type="text" id="telephone" name="telephone"><br>
+    
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br>
+    
+        <label for="age">Tuổi:</label>
+        <input type="number" id="age" name="age"><br>
+
+        <label for="address">Địa chỉ khách hàng:</label>
+        <input type="text" id="address" name="address"><br>
+
+        <button type="submit">Xóa thông tin khách hàng</button>
+      </form>  
+    </div>
+
+    <div id="get-form">
+      <h3>Tìm kiếm khách hàng qua ID</h3>
+      <form>
+        <label for="customer-id">ID khách hàng:</label>
+        <input type="text" id="customer-id" name="customer-id"><br>
+        <button type="submit">Tìm kiếm khách hàng</button>
+      </form>  
+    </div>
+  </div>
+
+  <div id="rating-site" class="tabcontent">
+    <!-- select, update, delete   -->
+    <div id="select-form">
+      <h3>Lựa chọn đánh giá</h3>
+      <form>
+        <label for="rating-id">Rating ID:</label>
+        <input type="number" id="rating-id" name="rating-id"><br>
+  
+        <label for="customer-id">ID khách hàng:</label>
+        <input type="number" id="customer-id" name="customer-id"><br>
+    
+        <label for="product-id">ID sản phẩm:</label>
+        <input type="number" id="product-id" name="product-id"><br>
+    
+        <label for="rate-star">Sao:</label>
+        <input type="number" id="rate-star" name="rate-star"><br>
+    
+        <label for="comment">Comment:</label>
+        <input type="text" id="comment" name="comment"><br>
+
+        <label for="rate-time">Thời gian đánh giá:</label>
+        <input type="datetime" id="rate-time" name="rate-time"><br>
+
+        <button type="submit">Lựa chọn đánh giá</button>
+      </form>  
+    </div>
+
+    <div id="update-form">
+      <h3>Cập nhật đánh giá</h3>
+      <form>
+        <label for="rating-id">Rating ID:</label>
+        <input type="number" id="rating-id" name="rating-id"><br>
+    
+        <label for="rate-star">Cập nhật số sao thành:</label>
+        <input type="number" id="rate-star" name="rate-star"><br>
+  
+        <button type="submit">Cập nhật đánh giá</button>
+      </form>  
+    </div>
+
+    <div id="delete-form">
+      <h3>Xóa đánh giá</h3>
+      <form>
+        <label for="rating-id">Rating ID:</label>
+        <input type="number" id="rating-id" name="rating-id"><br>
+  
+        <label for="customer-id">ID khách hàng:</label>
+        <input type="number" id="customer-id" name="customer-id"><br>
+    
+        <label for="product-id">ID sản phẩm:</label>
+        <input type="number" id="product-id" name="product-id"><br>
+    
+        <label for="rate-star">Sao:</label>
+        <input type="number" id="rate-star" name="rate-star"><br>
+    
+        <label for="comment">Comment:</label>
+        <input type="text" id="comment" name="comment"><br>
+
+        <label for="rate-time">Thời gian đánh giá:</label>
+        <input type="datetime" id="rate-time" name="rate-time"><br>
+
+        <button type="submit">Xóa đánh giá</button>
+      </form>  
+    </div>
+
+  </div>  
+
+  <div id="delivery-site" class="tabcontent">
+    <!--select, insert, delete-->
+    <div id="select-form">
+      <h3>Lựa chọn đơn vận chuyển</h3>
+      <form>
+        <label for="delivery-id">Delivery ID:</label>
+        <input type="number" id="delivery-id" name="delivery-id"><br>
+  
+        <label for="order-id">ID đặt hàng:</label>
+        <input type="number" id="order-id" name="order-id"><br>
+    
+        <label for="receiver-name">Tên người nhận:</label>
+        <input type="text" id="receiver-name" name="receiver-name"><br>
+    
+        <label for="telephone">SĐT:</label>
+        <input type="telephone" id="telephone" name="telephone"><br>
+    
+        <label for="address">Địa chỉ:</label>
+        <input type="text" id="address" name="address"><br>
+
+        <label for="status">Tình trạng giao hàng:</label>
+        <input type="text" id="status" name="status"><br>
+
+        <button type="submit">Lựa chọn đơn hàng</button>
+      </form>  
+    </div>
+
+    <div id="insert-form">
+      <h3>Thêm đơn vận chuyển</h3>
+      <form>
+        <label for="delivery-id">Delivery ID:</label>
+        <input type="number" id="delivery-id" name="delivery-id"><br>
+  
+        <label for="order-id">ID đặt hàng:</label>
+        <input type="number" id="order-id" name="order-id"><br>
+    
+        <label for="receiver-name">Tên người nhận:</label>
+        <input type="text" id="receiver-name" name="receiver-name"><br>
+    
+        <label for="telephone">SĐT:</label>
+        <input type="telephone" id="telephone" name="telephone"><br>
+    
+        <label for="address">Địa chỉ:</label>
+        <input type="text" id="address" name="address"><br>
+
+        <label for="status">Tình trạng giao hàng:</label>
+        <input type="text" id="status" name="status"><br>
+
+        <button type="submit">Thêm đơn vận chuyển</button>
+      </form>  
+    </div>
+
+    <div id="delete-form">
+      <h3>Xóa đơn vận chuyển</h3>
+      <form>
+        <label for="delivery-id">Delivery ID:</label>
+        <input type="number" id="delivery-id" name="delivery-id"><br>
+  
+        <label for="order-id">ID đặt hàng:</label>
+        <input type="number" id="order-id" name="order-id"><br>
+    
+        <label for="receiver-name">Tên người nhận:</label>
+        <input type="text" id="receiver-name" name="receiver-name"><br>
+    
+        <label for="telephone">SĐT:</label>
+        <input type="telephone" id="telephone" name="telephone"><br>
+    
+        <label for="address">Địa chỉ:</label>
+        <input type="text" id="address" name="address"><br>
+
+        <label for="status">Tình trạng giao hàng:</label>
+        <input type="text" id="status" name="status"><br>
+
+        <button type="submit">Xóa đơn hàng</button>
+      </form>  
+    </div>
+
+  </div>
+
+  <div id="cart-site" class="tabcontent">
+    <!--select,-->
+    <div id="select-form">
+      <h3>Lựa chọn giỏ hàng</h3>
+      <form>
+        <label for="cart-id">Cart ID:</label>
+        <input type="number" id="cart-id" name="cart-id"><br>
+  
+        <label for="customer-id">ID khách hàng:</label>
+        <input type="number" id="order-id" name="order-id"><br>
+    
+        <label for=product-id">ID sản phẩm:</label>
+        <input type="number" id="product-id" name="product-id"><br>
+
+        <button type="submit">Lựa chọn giỏ hàng</button>
+      </form>  
+    </div>  
+  </div>
+
+  <div id="order-site" class="tabcontent">
+    <!--select,insert, delete-->
+    <div id="select-form">
+      <h3>Lựa chọn đơn đặt hàng</h3>
+      <form>
+        <label for="order-id">Order ID:</label>
+        <input type="number" id="order-id" name="order-id"><br>
+  
+        <label for="customer-id">ID khách hàng:</label>
+        <input type="number" id="order-id" name="order-id"><br>
+    
+        <label for="product-id">ID sản phẩm:</label>
+        <input type="number" id="product-id" name="product-id"><br>
+
+        <label for="order-quantity">Số lượng đặt hàng:</label>
+        <input type="number" id="order-id" name="order-id"><br>
+
+        <label for="total-money">Tổng tiền:</label>
+        <input type="number" id="total-money" name="total-money"><br>
+
+        <label for="payment-method">Phương thức thanh toán:</label>
+        <input type="text" id="payment-method" name="payment-method"><br>
+
+        <label for="time-order">Thời gian thanh toán:</label>
+        <input type="datetime" id="time-order" name="time-order"><br>
+
+        <button type="submit">Lựa chọn đơn đặt hàng</button>
+      </form>  
+    </div>  
+
+    <div id="insert-form">
+      <h3>Thêm đơn đặt hàng</h3>
+      <form>  
+        <label for="customer-id">ID khách hàng:</label>
+        <input type="number" id="order-id" name="order-id"><br>
+    
+        <label for="product-id">ID sản phẩm:</label>
+        <input type="number" id="product-id" name="product-id"><br>
+
+        <label for="order-quantity">Số lượng đặt hàng:</label>
+        <input type="number" id="order-id" name="order-id"><br>
+
+        <label for="total-money">Tổng tiền:</label>
+        <input type="number" id="total-money" name="total-money"><br>
+
+        <label for="payment-method">Phương thức thanh toán:</label>
+        <input type="text" id="payment-method" name="payment-method"><br>
+
+        <label for="time-order">Thời gian thanh toán:</label>
+        <input type="datetime" id="time-order" name="time-order"><br>
+
+        <button type="submit">Thêm đơn đặt hàng</button>
+      </form>  
+    </div>  
+
+    <div id="delete-form">
+      <h3>Xóa đơn đặt hàng</h3>
+      <form>
+        <label for="order-id">Order ID:</label>
+        <input type="number" id="order-id" name="order-id"><br>
+  
+        <label for="customer-id">ID khách hàng:</label>
+        <input type="number" id="order-id" name="order-id"><br>
+    
+        <label for="product-id">ID sản phẩm:</label>
+        <input type="number" id="product-id" name="product-id"><br>
+
+        <label for="order-quantity">Số lượng đặt hàng:</label>
+        <input type="number" id="order-id" name="order-id"><br>
+
+        <label for="total-money">Tổng tiền:</label>
+        <input type="number" id="total-money" name="total-money"><br>
+
+        <label for="payment-method">Phương thức thanh toán:</label>
+        <input type="text" id="payment-method" name="payment-method"><br>
+
+        <label for="time-order">Thời gian thanh toán:</label>
+        <input type="datetime" id="time-order" name="time-order"><br>
+
+        <button type="submit">Xóa đơn đặt hàng</button>
+      </form>  
+    </div>  
+  </div>
+  
+  <div id="inventory-site" class="tabcontent">
+    <div id="select-form">
+      <h3>Lựa chọn cửa hàng</h3>
+      <form>
+        <label for="inventory-id">Inventory ID:</label>
+        <input type="number" id="inventory-id" name="inventory-id"><br>
+    
+        <label for="product-id">ID sản phẩm:</label>
+        <input type="number" id="product-id" name="product-id"><br>
+
+        <label for="product-quantity">Số lượng sản phẩm:</label>
+        <input type="number" id="product-quantity" name="product-quantity"><br>
+
+        <label for="latest-received-date">Thời gian tnhập hàng gần nhất:</label>
+        <input type="datetime" id="latest-received-date" name="latest-received-date"><br>
+
+        <button type="submit">Lựa chọn cửa hàng</button>
+      </form>  
+    </div>  
+  </div>
+  
+
+
+  <script src="main.js"></script>
+</body>
+</html>  
