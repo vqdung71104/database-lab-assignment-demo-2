@@ -64,3 +64,53 @@
 .tabcontent form button {
   align-self: flex-start;
 }
+
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  td {
+    padding: 10px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+  }
+  
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+  
+td {
+  padding: 10px;
+}
+  
+label {
+  display: inline-block;
+  width: 200px;
+  text-align: left;
+}
+  
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+  
+
+
+
+
+
+
